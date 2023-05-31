@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter} from "reac
 import Movies from './pages/Movies.jsx';
 import Home from './pages/Home.jsx';
 import Search from './pages/Search.jsx';
-import Category from './pages/category.jsx';
+import Category from './pages/Category.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
