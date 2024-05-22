@@ -5,7 +5,7 @@ import {
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import "./movie.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -116,7 +116,7 @@ function Movies() {
                   <div className="card-body">
                     <h5 className="card-title" style={{color: "white"}}>{similar.title}</h5>
                     <p className="card-text"><FaStar /> {similar.vote_average}</p>
-                    <a href={similar.id} className="btn btn-primary">Veja mais sobre</a>
+                    <Link to={`/movies/${similar.id}`} className="btn btn-primary">Veja mais sobre</Link>
                   </div>
                 </div>
               </div>

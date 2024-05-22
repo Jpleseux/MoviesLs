@@ -32,7 +32,7 @@ function Category(){
     useEffect(()=>{
         const categoryMovieUrl = `${categoryUrlEs}/discover/movie?${apiKey}&with_genres=${id}&language=pt-BR`
         getCategoryMovies(categoryMovieUrl)
-    },[])
+    },[id])
 
     return(
         <div className="container-web">
