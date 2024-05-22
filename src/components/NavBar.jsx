@@ -24,7 +24,6 @@ function NavBar(){
     const res = await fetch(url)
     const data = await res.json()
     setCategories(data.genres)
-    console.log(data.genres)
   }
 
   useEffect(()=>{
@@ -49,13 +48,13 @@ function NavBar(){
         <>
         <nav id="navbar">
         <button onClick={showbtn}>Categorias</button>
-          <h2>
+          <h2>''
           <Link to={"/"} ><BiCameraMovie /> Movies Ls</Link>
           </h2>
           {showCategory &&
         <div className="sidenav">
-            {categories.map((category)=>
-              <a type="button" href={`/category/${category.id}`} target="_self">
+            {categories.map((category, index)=>
+              <a type="button" href={`/category/${category.id}`} target="_self" key={index}>
               {category.name}</a>
             )}
         </div>

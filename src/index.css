@@ -1,18 +1,24 @@
-*{
+* {
   font-family: Helvetica;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: black;
+
+body {
+  background-color: black !important;
 }
 
-a{
+a {
   text-decoration: none;
   color: #f7d354;
-  transition: .5s;
+  transition: 0.5s;
 }
-a:hover{
-  color:#b8930c;
+
+a:hover {
+  color: #b8930c;
+}
+.card {
+  background-color: #111 !important;
+
 }

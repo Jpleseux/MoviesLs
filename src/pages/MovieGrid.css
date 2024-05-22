@@ -1,58 +1,130 @@
-.container .title{
-    color:#fff ;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem 0 1rem;
+.container-web .title {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
 }
-.title .query-text{
-    color: #f7d354;
+
+.title .query-text {
+  color: #f7d354;
 }
-h1{
-    color: white;
+
+h1 {
+  color: white;
 }
-.movies-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+
+.movies-container-web {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.movies-container div{
-    width: 40%;
-    color: #fff;
-    margin-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #111;
-    padding: 1rem;
+
+.movies-container-web div {
+  width: 45%; /* Ajustado para melhor responsividade */
+  color: #fff;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 1rem;
 }
-.movies-container div img{
-    max-width: 100%;
+
+.movies-container-web div img {
+  max-width: 100%;
 }
-.movies-container div img, .movies-container div p, .movies-container div img{
-    margin-bottom: 1rem;
+
+.movies-container-web div img,
+.movies-container-web div p {
+  margin-bottom: 1rem;
 }
-.movies-container div svg{
-    color: #f7d354;
+
+.movies-container-web div svg {
+  color: #f7d354;
 }
-.movies-container div a{
-    background-color: #f7d354;
-    border: 2px solid f7d354;
-    border-radius: 4px;
-    color: #000;
-    padding: .3rem;
-    font-size: 1rem 0.5rem;
-    align-items: center;
-    transition: .4s;
-    text-align: center;
-    font-weight: bold;
+
+.movies-container-web div a {
+  background-color: #f7d354;
+  border: 2px solid #f7d354;
+  border-radius: 4px;
+  color: #000;
+  padding: 0.3rem 0.5rem;
+  align-items: center;
+  transition: 0.4s;
+  text-align: center;
+  font-weight: bold;
 }
-.movies-container div a:hover{
-    background-color: transparent;
-    color: #f7d354;
+
+.movies-container-web div a:hover {
+  background-color: transparent;
+  color: #f7d354;
 }
-p{
-    color: white;
+
+p {
+  color: white;
+}
+
+@media (max-width: 768px) { /* Aplica estilos específicos para telas menores */
+  .movies-container-web div {
+      width: 100%; /* Ajustado para ocupar toda a largura em telas pequenas */
+  }
+}
+
+/* Estilo base para a paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Permitir que os itens quebrem para a próxima linha em telas menores */
+}
+
+.pagination li {
+  margin: 0.5rem; /* Espaçamento ao redor de cada item */
+}
+
+.pagination li a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block; /* Garantir que o link ocupe todo o espaço do item */
+}
+
+.pagination li a:hover {
+  background-color: #f7d354;
+  color: #000;
+}
+
+.pagination .active a {
+  background-color: #f7d354;
+  color: #000;
+  border: none;
+}
+
+.pagination .disabled a {
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .pagination {
+      justify-content: space-between; /* Espaçar os itens em telas menores */
+  }
+
+  .pagination li {
+      margin: 0.3rem; /* Reduzir o espaçamento em telas menores */
+  }
+
+  .pagination li a {
+      padding: 0.4rem 0.8rem; /* Reduzir o padding em telas menores */
+      font-size: 0.9rem; /* Reduzir o tamanho da fonte em telas menores */
+  }
 }
